@@ -17,8 +17,9 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       # Uncomment and configure these lines if using custom certificates and URLs
-      # MINIO_CERT_PUBLIC_KEY: ${MINIO_CERT_PUBLIC_KEY}
-      # MINIO_CERT_PRIVATE_KEY: ${MINIO_CERT_PRIVATE_KEY}
+       MINIO_CERT_PUBLIC_KEY: /root/.minio/certs/fullchain.pem
+      MINIO_CERT_PRIVATE_KEY: /root/.minio/certs/privkey.pem
       # MINIO_SERVER_URL: ${MINIO_SERVER_URL}
+
     command: server /data --console-address ":9001" --address "0.0.0.0:9000"
     restart: unless-stopped
