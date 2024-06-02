@@ -1,6 +1,13 @@
 pipeline {
     agent { label 'local' }
     stages {
+        stage('Dependencies') {
+            steps {
+                script {
+                    sh "sudo cp /root/projectenvs/minio/.env /var/lib/jenkins/workspace/minio"
+                }
+            }
+        }
         stage('Production') {
             steps {
                 script {
