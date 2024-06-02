@@ -17,7 +17,7 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       # Uncomment and configure these lines if using custom certificates and URLs
-       MINIO_CERT_PUBLIC_KEY: /root/.minio/certs/fullchain.pem
+      MINIO_CERT_PUBLIC_KEY: /root/.minio/certs/fullchain.pem
       MINIO_CERT_PRIVATE_KEY: /root/.minio/certs/privkey.pem
       # MINIO_SERVER_URL: ${MINIO_SERVER_URL}
 
